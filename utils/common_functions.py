@@ -12,7 +12,7 @@ def read_yaml(file_path):
             raise FileNotFoundError(f"File is not in the given path")
         
         with open(file_path, "r") as yaml_file:
-            config = yaml.safe_load(file_path)
+            config = yaml.safe_load(yaml_file)
             logger.info("Successfully read the YAML file")
             return config
     except Exception as e:
