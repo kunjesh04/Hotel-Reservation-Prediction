@@ -177,4 +177,7 @@ Data/
 
 artifacts/
 
-*.pkl
+notebooks/
+    random_forest.pkl
+
+mlruns/
