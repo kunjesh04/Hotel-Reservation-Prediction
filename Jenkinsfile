@@ -66,7 +66,7 @@ pipeline{
                         gcloud run deploy hotel-res-pred \
                             --image=gcr.io/${GCP_PROJECT}/hotel-res-pred:latest \
                             --platform=managed \
-                            --region=us-central-1 \
+                            --region=us-central1 \
                             --allow-unauthenticated
 
                         '''
