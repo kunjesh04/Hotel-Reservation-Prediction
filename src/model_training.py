@@ -49,7 +49,13 @@ class ModelTrainer():
     def train_lgbm(self, X_train, y_train):
         try:
             logger.info("Initializing LGBM Model")
-            lgbm = lgb.LGBMClassifier(random_state=self.random_search_params['random_state'])
+            lgbm_params = {
+                "random_state": self.random_search_params['random_state'],
+                "num_threads": 1,  # Limit to one thread
+                "force_col_wise": True  # Avoid auto-detection overhead
+            }
+
+            lgbm = lgb.LGBMClassifier(**lgbm_params)
             
             logger.info("Starting Hyperparameter fine-tuning")
             
