@@ -67,7 +67,7 @@ pipeline{
                             --image=gcr.io/${GCP_PROJECT}/hotel-res-pred:latest \
                             --platform=managed \
                             --region=us-central-1 \
-                            --allow=unauthenticated
+                            --allow-unauthenticated
 
                         '''
                     }
